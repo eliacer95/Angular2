@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ProductService } from './products/product.service';
-
-@Component({
-    selector: 'pm-app', 
+@Component ({
+    selector: 'pm-app',
+    //Inline Template
+    //Interpolación (one-way binding) : {{tituloPagina}}
     template: `
-     <div>
+    <div>
         <nav class='navbar navbar-default'>
             <div class='container-fluid'>
                 <a class='navbar-brand'>{{tituloPagina}}</a>
@@ -22,6 +23,6 @@ import { ProductService } from './products/product.service';
     providers: [ProductService]
 })
 
-export class AppComponent {
-    tituloPagina: string = 'Administración de Productos Walmart';
+export class AppComponent{
+    tituloPagina: string = 'Administración de productos walmart';
 }

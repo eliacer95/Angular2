@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { IProduct } from './product';
 
 @Component({
@@ -7,6 +6,7 @@ import { IProduct } from './product';
 })
 
 export class ProductDetailComponent{
-    tituloPagina: string = 'Detalle de Producto';
+    tituloPagina: string = 'Detalle de producto';
     product: IProduct;
+    
 }

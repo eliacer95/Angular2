@@ -1,6 +1,15 @@
-import { bootstrap } from 'angular2/platform/browser';
 
-// Our main component
-import { AppComponent } from './app.component';
+// Main entry point
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
 
-bootstrap(AppComponent);
+platformBrowserDynamic().bootstrapModule(AppModule);
+
+//Just in Time (JIT)
+
+//Ahead of Time (AOT)
+
+// import { platformBrowser} from '@angular/platform-browser';
+// import { AppModuleNgFactory } from './app.module.ngfactory';
+
+// platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);

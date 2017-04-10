@@ -23,9 +23,8 @@
             <thead>
                 <tr>
                     <th>
-                        <button (click)='toggleImagen()' 
-                            class='btn btn-primary'>
-                            {{mostrarImagen? 'Ocultar': 'Mostrar'}} Imagen
+                        <button (click)='toogleImagen()' class='btn btn-primary'>
+                            {{mostrarImagen ? 'Ocultar': 'Mostrar'}} Imagen
                         </button>
                     </th>
                     <th>Producto</th>
@@ -38,23 +37,21 @@
             <tbody>
                 <tr *ngFor='let product of products | productFilter: listaFiltro'>
                     <td>
-                        <img *ngIf='mostrarImagen' [src]='product.imagenURL'
-                            [title]='product.productName'
-                            [style.width.px]='imagenAncho'
-                            [style.margin.px]='imagenMargen'>
+                        <img *ngIf='mostrarImagen' [src]='product.imagenURL' 
+                        [title]='product.productName'
+                        [style.width.px]='imagenAncho'
+                        [style.margin.px]='imagenMargen'>
                     </td>
                     <td>{{ product.productName }}</td>
                     <td>{{ product.codigoProducto | lowercase}}</td>
                     <td>{{ product.fechaPublicacion}}</td>
                     <td>{{ product.precio | currency:'USD':true:'1.2-2'}}</td>
                     <td>
-                        <wc-star [rating]='product.rating'
-                            (ratingClicked)='onRatingClicked($event)'></wc-star>
-                            
+                        <wc-start [rating]='product.rating' 
+                        (ratingClicked)='OnRatingClicked($event)'></wc-start>
                     </td>
                 </tr>
             </tbody>
         </table>
    </div>
-
 </div>  
